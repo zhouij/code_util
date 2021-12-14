@@ -1,66 +1,12 @@
-
-# OS generated files #
-######################
+target
+out
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Compiled Source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Misc #
-########
-*.log
-*.port
-*.pid
 node_modules
+log
+*.log
 
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.ear
-*.war
-*.tar
-*.zip
-
-# Gradle Project #
-##################
-.gradle
-build/
-out/
-gradle-app.setting
-!gradle-wrapper.jar
-.gradletasknamecache
-
-# Maven Project #
-#################
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-# Eclipse/IDE #
-###############
+# IDE #
+#######
 .classpath
 .project
 .metadata
@@ -69,17 +15,26 @@ bin/
 *.bak
 *.swp
 local.properties
-.loadpath
 .settings/
 tmp/
 .springBeans
 .target
-.buildpath
+.buildPath
 .factorypath
 .cproject
 .externalToolBuilders/
-.recommenders/
 *.iml
 .idea/
 
-envs.js
+.gradle
+build
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+/iam-common/src/main/generated/
