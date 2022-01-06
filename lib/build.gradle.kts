@@ -9,8 +9,9 @@
 version = "0.1.0"
 
 plugins {
+
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.5.31"
+    id("org.jetbrains.kotlin.jvm")
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
@@ -40,3 +41,15 @@ dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")
 }
+
+java {
+    withSourcesJar()
+}
+
+tasks.jar {
+    manifest {
+        attributes(mapOf("Implementation-Title" to project.name,
+            "Implementation-Version" to project.version))
+    }
+}
+
