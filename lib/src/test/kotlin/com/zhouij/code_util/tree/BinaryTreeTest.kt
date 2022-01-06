@@ -7,7 +7,10 @@ class BinaryTreeTest {
 
     @Test
     fun `Test Building Tree`() {
-        val root = buildBinaryTree("[2,1,4,null,null,3]")
-        assertEquals(root?.`val`, 2)
+        val input = "[2,1,4,null,null,3]"
+        val root = buildBinaryTree(input)
+        assertEquals(root!!.`val`, 2)
+        val output = levelOrderTraversal(root)
+        assertEquals(input, output)
     }
 }
