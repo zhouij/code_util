@@ -64,7 +64,7 @@ fun removeTrailingWords(input: MutableList<String>, word: String) {
     }
 }
 
-vfrrdr
+
 private fun buildTreeNode(input: String): TreeNode? {
     return if (input == "null") null
     else TreeNode(input.toInt())
