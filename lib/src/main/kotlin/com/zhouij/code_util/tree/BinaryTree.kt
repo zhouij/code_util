@@ -38,27 +38,32 @@ fun buildBinaryTree(input: String): TreeNode? {
     return root
 }
 
-fun levelOrderTraversal(root: TreeNode): String {
-    val result = mutableListOf<String>()
+fun levelOrderTraversal(root: TreeNode): List<Int?> {
+    val result = mutableListOf<Int?>()
     val q = LinkedList<TreeNode?>()
     q.addFirst(root)
     while (!q.isEmpty()) {
         val curr = q.removeLast()
         if (curr == null) {
-            result.add("null")
+            result.add(null)
         } else {
-            result.add(curr.`val`.toString())
+            result.add(curr.`val`)
             q.addFirst(curr.left)
             q.addFirst(curr.right)
         }
     }
-    removeTrailingWords(result, "null")
-    return "["+ result.joinToString(separator = ",") + "]"
+
+    removeTrailingNulls(result)
+    return result
 }
 
-fun removeTrailingWords(input: MutableList<String>, word: String) {
+fun listResultToString(input: List<Int?>): String {
+    return "[" + input.joinToString(",") + "]"
+}
+
+fun removeTrailingNulls(input: MutableList<Int?>) {
     var curr = input.last()
-    while (curr == word) {
+    while (curr == null) {
         input.removeLast()
         curr = input.last()
     }
