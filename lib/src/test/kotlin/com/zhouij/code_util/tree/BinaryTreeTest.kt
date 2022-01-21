@@ -11,6 +11,7 @@ class BinaryTreeTest {
         val root = buildBinaryTree(input)
         assertEquals(root!!.`val`, 2)
         val output = levelOrderTraversal(root)
-        assertEquals(input, output)
+        val result = listResultToString(output)
+        assertEquals(input, result)
     }
 }
