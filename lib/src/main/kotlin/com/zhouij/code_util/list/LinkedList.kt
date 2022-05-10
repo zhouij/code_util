@@ -1,4 +1,4 @@
-package com.zhouij.code_util.tree
+package com.zhouij.code_util.list
 
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
