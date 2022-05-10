@@ -1,4 +1,4 @@
-package com.zhouij.code_util.tree
+package com.zhouij.code_util.list
 
 import org.junit.Test
 import kotlin.test.assertEquals
