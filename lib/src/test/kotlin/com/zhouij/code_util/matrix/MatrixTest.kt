@@ -1,5 +1,7 @@
-package com.zhouij.code_util.tree
+package com.zhouij.code_util.matrix
 
+import com.zhouij.code_util.tree.buildIntMatrix
+import com.zhouij.code_util.tree.matrixToString
 import org.junit.Test
 import kotlin.test.assertEquals
 
